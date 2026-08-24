@@ -166,10 +166,6 @@ class PJIPLogic:
 
         return None
 
-    # def after_ui_launched(self, hwnd):
-    #     pass
-        # self.set_window_display_affinity(hwnd)
-
     @staticmethod
     def get_current_pid():
         return os.getpid()
