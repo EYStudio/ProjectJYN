@@ -1,67 +1,84 @@
-# PJIP
+# ProjectJYN
 
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![License](https://img.shields.io/badge/license-GPLv3-pink)
-![Stars](https://img.shields.io/github/stars/Eystudio/PJIP?style=social)
-![Last Update](https://img.shields.io/github/last-commit/Eystudio/PJIP)
 
-[English Documentation](README.md) | [中文文档](README-ZH.md)
+[//]: # (![Stars]&#40;https://img.shields.io/github/stars/Eystudio/ProjectJYN?style=social&#41;)
+
+[//]: # (![Last Update]&#40;https://img.shields.io/github/last-commit/Eystudio/ProjectJYN&#41;)
+
+[//]: # ([English Documentation]&#40;README.md&#41; | [中文文档]&#40;README-ZH.md&#41;)
 
 A classroom management assistant tool for Studentmain (极域) built with `Python`.
 
 ---
 
+## IMPORTANT NOTICE
+
+ProjectJYN is a testing Version of JIV
+
+All functions are under development
+
 ## Project Overview
 
-`PJIP` is a Python-based assistant tool for managing the Studentmain classroom control software.  
+`ProjectJYN` is a Python-based assistant tool for managing the Studentmain classroom control software.  
 It provides features such as killing processes, suspending/resuming Studentmain, password extraction, and includes a clean and intuitive graphical interface.
 
 ## Features
 
 - **Kill Studentmain**: Instantly terminate the running Studentmain process  
-- **Suspend Studentmain**: Suspend the process with the ability to resume later  
-- **Retrieve Studentmain Password**: Attempt to extract the password  
-- **User‑friendly UI**: Built with `PySide6`, simple and easy to use  
 
-## Installation
+[//]: # (- **Suspend Studentmain**: Suspend the process with the ability to resume later  )
 
-This project runs on `Python 3.x`.
+[//]: # (- **Retrieve Studentmain Password**: Attempt to extract the password  )
 
-Before getting started, prepare your Python environment and clone the repository:
+[//]: # (## Installation)
 
-```bash
-git clone https://github.com/Eystudio/PJIP.git
-cd PJIP
-```
+[//]: # ()
+[//]: # (This project runs on `Python 3.x`.)
 
-If you prefer using a virtual environment (recommended):
+[//]: # (Before getting started, prepare your Python environment and clone the repository:)
 
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+[//]: # ()
+[//]: # (```bash)
 
-Then install the dependencies according to the project configuration:
+[//]: # (git clone https://github.com/Eystudio/ProjectJYN.git)
 
-```bash
-pip install .
-```
+[//]: # (cd ProjectJYN)
 
-If you prefer using requirements.txt, you can also run:
+[//]: # (```)
 
-```bash
-pip install -r requirements.txt
-```
+[//]: # ()
+[//]: # (If you prefer using a virtual environment &#40;recommended&#41;:)
 
-## Developer Notice
+[//]: # ()
+[//]: # (```bash)
 
-> A message from the developer:
-> 
-> Due to limited personal time, this project will temporarily enter maintenance mode, and future updates will be released irregularly.
-> 
-> Additionally, various limitations encountered with Python and PySide6 during development have significantly slowed progress. As a result, no major updates are expected in the near future.
-> 
-> Please look forward to the next-generation Studentmain management tool, built with a new language and a new UI framework.
+[//]: # (python -m venv venv)
+
+[//]: # (source venv/bin/activate  # On Windows: venv\Scripts\activate)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (Then install the dependencies according to the project configuration:)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (pip install .)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (If you prefer using requirements.txt, you can also run:)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (pip install -r requirements.txt)
+
+[//]: # (```)
 
 ## Contributing
 
