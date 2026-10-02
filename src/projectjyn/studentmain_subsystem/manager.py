@@ -1,11 +1,11 @@
 import threading
 from dataclasses import dataclass
+from typing import Callable
 
 from projectjyn.studentmain_subsystem.monitor import Monitor
 
 
 class MonitorManager:
-
     def __init__(self):
         self._tasks: dict[str, MonitorTask] = {}
         self._lock = threading.Lock()
@@ -14,8 +14,12 @@ class MonitorManager:
             self,
             name: str,
             monitor: Monitor,
+            callback: Callable[[object], None],
             interval: float,
     ):
+        if interval <= 0:
+            raise ValueError("interval must be greater than 0")
+
         with self._lock:
             if name in self._tasks:
                 raise ValueError(
@@ -25,6 +29,7 @@ class MonitorManager:
             self._tasks[name] = MonitorTask(
                 monitor=monitor,
                 interval=interval,
+                callback=callback
             )
 
     def start(self, name: str):
@@ -62,13 +67,14 @@ class MonitorManager:
 
 @dataclass
 class MonitorTask:
-    monitor: Monitor
-    interval: float
-    _thread: threading.Thread
 
-    def __post_init__(self):
+    def __init__(self, monitor, interval, callback):
+        self.monitor = monitor
+        self.interval = interval
+        self.callback = callback
+
         self._stop_event = threading.Event()
-        self._thread: threading.Thread | None = None
+        self._thread = None
 
     def start(self):
         if self.is_running():
@@ -76,6 +82,7 @@ class MonitorTask:
 
         self._stop_event.clear()
 
+        # noinspection PyAttributeOutsideInit
         self._thread = threading.Thread(
             target=self._run,
             daemon=True,
@@ -94,9 +101,10 @@ class MonitorTask:
     def _run(self):
         while not self._stop_event.is_set():
             try:
-                self.monitor.poll()
+                result = self.monitor.poll()
+                self.callback(result)
             except Exception:
-                # 这里可以接你的日志系统
+                # log
                 pass
 
             self._stop_event.wait(self.interval)
