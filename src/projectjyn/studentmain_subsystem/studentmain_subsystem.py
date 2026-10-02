@@ -1,6 +1,6 @@
 from discovery import StudentmainContext, StudentmainLookup, StudentmainDiscovery
 from projectjyn.studentmain_subsystem.manager import MonitorManager
-from projectjyn.studentmain_subsystem.monitor import ProcessMonitor, SuspendMonitor
+from projectjyn.studentmain_subsystem.monitor import ProcessMonitor, SuspendMonitor, StudentmainPasswordMonitor
 
 
 class StudentmainSubsystem:
@@ -72,7 +72,6 @@ class StudentmainSubsystem:
         self._start_components()
 
     def _start_components(self):
-        # todo: 后面在这里启动：
-        pass
-
-
+        self._manager.register('process', ProcessMonitor(self.logic), lambda x: print(x), 0.5)
+        self._manager.register('process', SuspendMonitor(self.logic), lambda x: print(x), 0.5)
+        self._manager.register('process', StudentmainPasswordMonitor(self.logic), lambda x: print(x), 0.5)
