@@ -1,12 +1,6 @@
 from enum import Enum, auto
 
 
-class PJIPGeneralStatus(Enum):
-    SUCCESS = 0
-    FAILED = 1
-    ERROR = 2
-
-
 class SuspendState(Enum):
     NOT_FOUND = 0
     SUSPENDED = 1
@@ -33,3 +27,8 @@ class PidStatus(Enum):
     ZOMBIE = auto()
     STOPPED = auto()
     UNKNOWN = auto()
+
+class PrivilegeLevel(Enum):
+    USER = auto()
+    ADMIN = auto()
+    SYSTEM = auto()
