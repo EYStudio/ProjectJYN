@@ -25,7 +25,6 @@ class ProcessMonitor(Monitor):
 
 
 class SuspendMonitor(Monitor):
-
     def __init__(self, logic):
         self.logic = logic
 
@@ -45,10 +44,21 @@ class SuspendMonitor(Monitor):
         return SuspendState.RUNNING
 
 
-class StudentmainPasswordMonitor(Monitor):
+class PasswordMonitor(Monitor):
 
     def __init__(self, logic):
         self.logic = logic
 
     def poll(self):
         return self.logic.decode_studentmain_password()
+
+
+class WindowMonitor(Monitor):
+
+    def __init__(self, logic):
+        self.logic = logic
+
+    def poll(self) -> bool:
+        return self.logic.get_window_state(
+            constants.E_CLASSROOM_WINDOW_NAME
+        )
