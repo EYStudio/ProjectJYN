@@ -2,27 +2,25 @@
 
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![License](https://img.shields.io/badge/license-GPLv3-pink)
-
-[//]: # (![Stars]&#40;https://img.shields.io/github/stars/Eystudio/ProjectJYN?style=social&#41;)
-
-[//]: # (![Last Update]&#40;https://img.shields.io/github/last-commit/Eystudio/ProjectJYN&#41;)
+![Stars](https://img.shields.io/github/stars/Eystudio/ProjectJYN?style=social)
+![Last Update](https://img.shields.io/github/last-commit/Eystudio/ProjectJYN)
 
 [//]: # ([English Documentation]&#40;README.md&#41; | [中文文档]&#40;README-ZH.md&#41;)
 
-A classroom management assistant tool for Studentmain (极域) built with `Python`.
+A classroom management assistant tool for `Studentmain (极域) built with` `Python`.
 
 ---
 
 ## IMPORTANT NOTICE
 
-ProjectJYN is a testing Version of JIV
+ProjectJYN is a testing Version of JIV Core
 
 All functions are under development
 
 ## Project Overview
 
 `ProjectJYN` is a Python-based assistant tool for managing the Studentmain classroom control software.  
-It provides features such as killing processes, suspending/resuming Studentmain, password extraction, and includes a clean and intuitive graphical interface.
+It provides features such as killing processes, suspending/resuming Studentmain, password extraction.
 
 ## Features
 
@@ -32,21 +30,18 @@ It provides features such as killing processes, suspending/resuming Studentmain,
 
 [//]: # (- **Retrieve Studentmain Password**: Attempt to extract the password  )
 
-[//]: # (## Installation)
+## Installation
 
-[//]: # ()
-[//]: # (This project runs on `Python 3.x`.)
+This project runs on `Python 3.x`.
 
-[//]: # (Before getting started, prepare your Python environment and clone the repository:)
+Before getting started, prepare your Python environment and clone the repository:
 
-[//]: # ()
-[//]: # (```bash)
+```bash
 
-[//]: # (git clone https://github.com/Eystudio/ProjectJYN.git)
+git clone https://github.com/Eystudio/ProjectJYN.git
 
-[//]: # (cd ProjectJYN)
-
-[//]: # (```)
+cd ProjectJYN
+```
 
 [//]: # ()
 [//]: # (If you prefer using a virtual environment &#40;recommended&#41;:)
@@ -86,4 +81,4 @@ Suggestions and code improvements are always welcome!
 Feel free to open an Issue or submit a Pull Request.
 If you have ideas or questions, you can contact the author or leave a message on GitHub.
 
-Copyright (C) 2025 Errorsia & Yusulif
+Copyright (C) 2026 Errorsia & Yusulif
