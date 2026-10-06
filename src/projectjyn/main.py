@@ -8,6 +8,13 @@ class ProjectJYNMain:
         self.platform = Platform()
         self.bootstrap = BootStrap(self.platform)
 
+        input('Testing, press enter to exit...')
+
+
+def main():
+    ProjectJYNMain()
+
 
 if __name__ == "__main__":
     ProjectJYNMain()
+    main()
