@@ -1,0 +1,22 @@
+[project]
+name = "projectjyn"
+version = "0.1.0"
+description = "Testing Version of JIV core"
+readme = "README.md"
+authors = [
+    { name = "Errorsia", email = "Errorsia@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "packaging>=26.3",
+    "psutil>=7.2.2",
+    "pywin32>=312",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+projectjyn = "projectjyn:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
